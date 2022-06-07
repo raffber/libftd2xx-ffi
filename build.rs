@@ -6,21 +6,21 @@ fn search_path<'a>() -> &'a str {
             "x86_64" => {
                 #[cfg(not(feature = "static"))]
                 {
-                    "vendor\\windows\\amd64"
+                    "vendor/windows/amd64"
                 }
                 #[cfg(feature = "static")]
                 {
-                    "vendor\\windows\\Static\\amd64"
+                    "vendor/windows/Static/amd64"
                 }
             }
             "x86" => {
                 #[cfg(not(feature = "static"))]
                 {
-                    "vendor\\windows\\i386"
+                    "vendor/windows/i386"
                 }
                 #[cfg(feature = "static")]
                 {
-                    "vendor\\windows\\Static\\i386"
+                    "vendor/windows/Static/i386"
                 }
             }
             target_arch => panic!("Target architecture not supported: {}", target_arch),
